@@ -1,0 +1,65 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5rem 1fr 1fr;
+    grid-template-areas: "title title title title title title title title title title title title"
+                        "navigation vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent"
+                        "navigation vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent";
+}
+.title-container{
+    background-color: aqua;
+    grid-area: title;
+}
+.content-container{
+    display: grid;
+    grid-template-rows: 1fr 8rem;
+    grid-area: vcontent;
+}
+.navigation-container{
+    list-style-type: none;
+    background-color: aqua;
+    grid-area:navigation;
+}
+.cards-container
+{
+    width: 60rem;
+    height: 25rem;
+    background-color: bisque;
+    align-self: center;
+    justify-self: center;
+    border-radius: 2rem;
+}
+.buttons-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.buttom-accept
+{
+    padding: 1rem;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 2rem;
+}
+.buttom-edit
+{
+    padding: 1rem;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 2rem;
+}
+.buttom-remove
+{
+    padding: 1rem;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 2rem;
+}
