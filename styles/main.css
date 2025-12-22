@@ -45,21 +45,32 @@ body{
 .buttom-accept
 {
     padding: 1rem;
-    background-color: green;
+    background-color: rgb(0, 75, 0);
     border: 1px solid black;
     border-radius: 2rem;
 }
 .buttom-edit
 {
     padding: 1rem;
-    background-color: yellow;
+    background-color: rgb(152, 152, 0);
     border: 1px solid black;
     border-radius: 2rem;
 }
 .buttom-remove
 {
     padding: 1rem;
-    background-color: red;
+    background-color: rgb(109, 0, 0);
     border: 1px solid black;
     border-radius: 2rem;
+}
+.buttom-accept:hover{
+    background-color: rgb(1, 255, 1);
+}
+.buttom-edit:hover
+{
+    background-color: yellow;
+}
+.buttom-remove:hover
+{
+    background-color: red;
 }
