@@ -101,3 +101,6 @@ body {
 .buttom-remove:hover {
     background-color: red;
 }
+.closed{
+    display: none;
+}
