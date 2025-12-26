@@ -7,25 +7,40 @@
     <script src="./scripts/behaviors.js" defer></script>
 </head>
 
-<body>
+<body class="main-container">
     <div class="title-container">
-        <p ></p>
+        <p class="title">Produtividade Melhorada</p>
     </div>
-        <ul class="navigation-container">
-            <li></li>
-        </ul>
-        <div class="content-container dialog">
-            <ul class="cards-container dialog" data-dialog="container">
+    <ul class="navigation-container">
+    </ul>
+    <div class="content-container">
+        <div class="cards-container">
+            <p class="cards-title">Pendente</p>
+            <ul class="cards-list todo-cards-list">
 
             </ul>
-            <div class="buttons-container">
-                <a class="buttom-accept" data-dialog="container" data-action="open">Adicionar</a>
-                <a class="buttom-edit">Editar</a>
-                <a class="buttom-remove" data-dialog="container" data-action="close">Remover</a>
+            <div class="task-input-container">
+                <input class="dialog" type="text" id="new_task_input" data-dialog="new-task" data-action="new-task-input">
+                <a class="add-task-button" data-dialog="new-task" data-action="generate_card"></a>
             </div>
+            
         </div>
-    </div>
+        <div class="cards-container">
+            <p class="cards-title">Em Andamento</p>
+            <ul class="cards-list">
 
+            </ul>
+        </div>
+        <div class="cards-container">
+            <p class="cards-title">Concluído</p>
+            <ul class="cards-list">
+
+            </ul>
+        </div>
+    </div> 
+    <div class="card-edit-container">
+     <label></label>
+    </div>
 </body>
 
 </html>

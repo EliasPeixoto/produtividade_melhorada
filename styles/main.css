@@ -1,76 +1,115 @@
+:root
+{
+    --navbar-color: #20110E;
+    --text-color: #20110E;
+    --title-color: #7D6BD6;
+    --background-color: #A0CAC6;
+    --section-bg-color: white;
+    --highlight-color: #B7B17B;
+    --border-color: #B7B17B ;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    overflow: hidden;
+    color: var(--text-color);
+    background-color: var(--background-color);
     height: 100vh;
     display: grid;
     grid-template-columns: 4rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1.5rem 1fr 1fr;
+    grid-template-rows: 2rem 1fr 1fr;
     grid-template-areas: "title title title title title title title title title title title title"
         "navigation vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent"
         "navigation vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent vcontent";
 }
 
 .title-container {
-    background-color: aqua;
+    background-color: var(--navbar-color);
     grid-area: title;
+}
+.title{
+    color:var(--title-color);
+    font-size: x-large;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
 }
 
 .content-container {
+    min-height: 0;
     padding: 1rem;
     display: grid;
-    grid-template-rows: 1fr 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-area: vcontent;
+    gap:1rem;
 }
 
 .navigation-container {
     list-style-type: none;
-    background-color: aqua;
+    background-color: var(--navbar-color);
     grid-area: navigation;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+    
 }
 
 .cards-container {
+    min-height: 0;
+    display: grid;
+    grid-template-rows: 1.5rem 1fr 1.5rem;
+    gap: 1rem;
+    align-items: center;  
+}
+.cards-title
+{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.cards-list
+{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    min-height: 0;
     display: flex;
-    width: 40rem;
-    height: 20rem;
-    background-color: bisque;
-    align-self: center;
-    justify-self: center;
-    border-radius: 2rem;
+    background-color: var(--section-bg-color);
+    align-self: stretch;
+    justify-self: stretch;
+    border-radius: 0.5rem;  
     list-style-type: none;
-    gap: 2rem;
+    gap: 0.5rem;
     flex-direction: column;
     align-items: stretch;
     justify-content:baseline;
     padding: 2rem;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    
-
+    border: 1px solid  var(--border-color);
 }
 
-.cards-container
-
 .card { 
-    padding: 2rem;
-    border: 1px solid black;
+    text-align: center;
+    padding: 0.5rem;
+    border: 2px solid  var(--border-color);
     background-color: white;
+    border-radius: 0.5rem;
 }
 
 .buttons-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .buttom-accept {
     padding: 1rem;
     background-color: rgb(0, 75, 0);
     border: 1px solid black;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
@@ -78,7 +117,7 @@ body {
     padding: 1rem;
     background-color: rgb(152, 152, 0);
     border: 1px solid black;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
@@ -86,7 +125,7 @@ body {
     padding: 1rem;
     background-color: rgb(109, 0, 0);
     border: 1px solid black;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
@@ -101,6 +140,27 @@ body {
 .buttom-remove:hover {
     background-color: red;
 }
+.add-task-button:hover{
+    background-color: blue;
+}
 .closed{
     display: none;
+}
+.card-edit-container
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.add-task-button
+{
+    padding: 0.5rem;
+    background-color: rgb(0, 0, 100);
+    border-radius: 0.2rem;
+}
+.task-input-container
+{
+    padding: 0.2rem;
+    gap: 0.2rem;
+    display: grid;
+    grid-template-columns: 1fr 2rem;
 }
